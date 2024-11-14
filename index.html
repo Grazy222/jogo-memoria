@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Rick and Morty Memory Game</title>
+
+</head>
+
+<body>
+
+    <form class="login__form">
+        <div class="login__header">
+            <img src="./imagens/banner.png" alt="Banner">
+            <h1>Rick and Morty Memory Game</h1>
+        </div>
+        <input type="text" placeholder="Name" class="login__input">
+        <button type="submit" class="login__button" disabled>Play</button>
+    </form>
+
+    <!-- Seção do Jogo (oculta inicialmente) -->
+    <section id="game-section" style="display: none;">
+        <div id="gameBoard">
+            <!-- <div class="front face">
+                <img src="./imagens/beth.png" alt="Beth">
+            </div>
+            <div class="back face" ></div> -->
+        </div>
+        <div id="winMessage" class="hidden">
+            <div class="winMessageContent">
+                <h2>Parabéns! Você venceu!</h2>
+                <p id="winMessageText"></p>
+                <button onclick="resetGame()">Jogar Novamente</button>
+            </div>
+        </div>
+        <!-- Tabuleiro do jogo e outras partes do jogo -->
+    </section>
+    <script src="./script.js"></script>
+</body>
+
+</html>

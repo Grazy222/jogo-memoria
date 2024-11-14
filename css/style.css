@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.login__form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgb(111, 111, 238);
+    justify-content: center;
+}
+
+.login__header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.login__header img {
+    width: 200px;
+}
+
+.login__input {
+    border: 2px solid #333;
+    border-radius: 8px;
+    color: #333;
+    font-size: 1em;
+    margin-bottom: 15px;
+    max-width: 300px;
+    outline: none;
+    padding: 15px;
+    width: 100%;
+}
+
+.login__button {
+    background-color: orangered;
+    border-radius: 8px;
+    color: #fefefe;
+    padding: 15px;
+    font-size: 1em;
+    max-width: 300px;
+    cursor: pointer;
+}
+
+.login__button:disabled {
+    background-color: antiquewhite;
+    color: #333;
+    cursor: auto;
+}
+
+/* Estilos do Tabuleiro de Jogo */
+#game-section {
+    height: 100vh;
+    border: solid;
+    background-color: antiquewhite;
+}
+
+#gameBoard {
+    width: 67vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 7%;
+    margin-left: 7%;
+
+
+}
+
+
+.card {
+    /* aspect-ratio: 4 / 5; */
+    height: 100%;
+    background-color: rgb(71, 14, 185);
+    border-radius: 5px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 5px;
+}
+
+.back {
+
+    /* Verifique o caminho */
+    background-size: cover;
+    background-position: center;
+
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: #12ca30 solid;
+}
+
+.front {
+    background-image: url('../imagens/dimensaoDia.png');
+    /* Verifique o caminho */
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+/* Estilos para a janela de mensagem */
+.hidden {
+    display: none;
+}
+
+/* #winMessage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}  */
+
+.winMessageContent {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.winMessageContent h2 {
+    margin-top: 0;
+}
+
+.winMessageContent button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+}
